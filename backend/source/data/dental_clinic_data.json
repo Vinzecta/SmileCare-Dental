@@ -1,0 +1,352 @@
+{
+  "doctors": [
+    {
+      "doctor_id": 1,
+      "full_name": "Dr. Emily Parker",
+      "address": "Address 1",
+      "phone_number": "0900000001",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "emily_parker",
+      "dob": "1982-03-12",
+      "specialties": ["Orthodontics", "Pediatric Dentistry"],
+      "experience": 12,
+      "description": "Experienced orthodontist specializing in braces and children's dental care."
+    },
+    {
+      "doctor_id": 2,
+      "full_name": "Dr. Jacob Reed",
+      "address": "Address 2",
+      "phone_number": "0900000002",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "jacob_reed",
+      "dob": "1980-06-08",
+      "specialties": ["Endodontics", "Restorative Dentistry", "Pediatric Dentistry"],
+      "experience": 14,
+      "description": "Expert in root canal treatments and restoring damaged teeth."
+    },
+    {
+      "doctor_id": 3,
+      "full_name": "Dr. Olivia Bennett",
+      "address": "Address 3",
+      "phone_number": "0900000003",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "olivia_bennett",
+      "dob": "1985-11-02",
+      "specialties": ["Cosmetic Dentistry", "Orthodontics"],
+      "experience": 10,
+      "description": "Focused on smile design, veneers, and dental prosthetics."
+    },
+    {
+      "doctor_id": 4,
+      "full_name": "Dr. Michael Carter",
+      "address": "Address 4",
+      "phone_number": "0900000004",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "michael_carter",
+      "dob": "1979-01-25",
+      "specialties": ["Oral Surgery", "Implant Dentistry"],
+      "experience": 16,
+      "description": "Specializes in surgical tooth extractions and dental implants."
+    },
+    {
+      "doctor_id": 5,
+      "full_name": "Dr. Sophia Collins",
+      "address": "Address 5",
+      "phone_number": "0900000005",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "sophia_collins",
+      "dob": "1984-09-09",
+      "specialties": ["Periodontics", "Orthodontics"],
+      "experience": 11,
+      "description": "Focuses on gum disease, laser treatments, and tissue regeneration."
+    },
+    {
+      "doctor_id": 6,
+      "full_name": "Dr. Daniel Hughes",
+      "address": "Address 6",
+      "phone_number": "0900000006",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "daniel_hughes",
+      "dob": "1981-02-15",
+      "specialties": ["Orthodontics", "Restorative Dentistry"],
+      "experience": 13,
+      "description": "Provides comprehensive dental care and restorative treatments."
+    },
+    {
+      "doctor_id": 7,
+      "full_name": "Dr. Ava Mitchell",
+      "address": "Address 7",
+      "phone_number": "0900000007",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "ava_mitchell",
+      "dob": "1987-04-18",
+      "specialties": ["Cosmetic Dentistry", "Whitening Treatments"],
+      "experience": 8,
+      "description": "Expert in aesthetic dental procedures and smile enhancement."
+    },
+    {
+      "doctor_id": 8,
+      "full_name": "Dr. Benjamin Scott",
+      "address": "Address 8",
+      "phone_number": "0900000008",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "ben_scott",
+      "dob": "1978-10-10",
+      "specialties": ["Implant Dentistry", "Oral Surgery"],
+      "experience": 18,
+      "description": "Highly skilled in implant surgeries and complex oral procedures."
+    },
+    {
+      "doctor_id": 9,
+      "full_name": "Dr. Chloe Watson",
+      "address": "Address 9",
+      "phone_number": "0900000009",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "chloe_watson",
+      "dob": "1986-05-14",
+      "specialties": ["Pediatric Dentistry", "Preventive Dentistry"],
+      "experience": 9,
+      "description": "Provides gentle dental care tailored for children and teens."
+    },
+    {
+      "doctor_id": 10,
+      "full_name": "Dr. Ethan Brooks",
+      "address": "Address 10",
+      "phone_number": "0900000010",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "ethan_brooks",
+      "dob": "1977-12-22",
+      "specialties": ["Endodontics", "Oral Diagnosis"],
+      "experience": 19,
+      "description": "Expert in diagnosing dental pain and performing root canal therapy."
+    },
+    {
+      "doctor_id": 11,
+      "full_name": "Dr. Lily Anderson",
+      "address": "Address 11",
+      "phone_number": "0900000011",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "lily_anderson",
+      "dob": "1983-03-09",
+      "specialties": ["Orthodontics", "General Dentistry"],
+      "experience": 12,
+      "description": "Provides braces and aligners, along with routine dental care."
+    },
+    {
+      "doctor_id": 12,
+      "full_name": "Dr. Samuel Turner",
+      "address": "Address 12",
+      "phone_number": "0900000012",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "samuel_turner",
+      "dob": "1982-07-27",
+      "specialties": ["Orthodontics", "Implant Dentistry"],
+      "experience": 12,
+      "description": "Specializes in gum treatment and implant placement."
+    },
+    {
+      "doctor_id": 13,
+      "full_name": "Dr. Grace Morgan",
+      "address": "Address 13",
+      "phone_number": "0900000013",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "grace_morgan",
+      "dob": "1988-11-11",
+      "specialties": ["Cosmetic Dentistry", "Pediatric Dentistry"],
+      "experience": 7,
+      "description": "Focuses on children's dental care and cosmetic enhancements."
+    },
+    {
+      "doctor_id": 14,
+      "full_name": "Dr. Henry Foster",
+      "address": "Address 14",
+      "phone_number": "0900000014",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "henry_foster",
+      "dob": "1976-02-02",
+      "specialties": ["Oral Surgery", "Endodontics"],
+      "experience": 20,
+      "description": "Handles complex surgeries and root canal treatments."
+    },
+    {
+      "doctor_id": 15,
+      "full_name": "Dr. Natalie Rivera",
+      "address": "Address 15",
+      "phone_number": "0900000015",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "natalie_rivera",
+      "dob": "1984-08-04",
+      "specialties": ["General Dentistry", "Restorative Dentistry"],
+      "experience": 11,
+      "description": "Manages routine checkups and dental restorations."
+    },
+    {
+      "doctor_id": 16,
+      "full_name": "Dr. Andrew Hayes",
+      "address": "Address 16",
+      "phone_number": "0900000016",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "andrew_hayes",
+      "dob": "1979-09-29",
+      "specialties": ["Orthodontics", "Implant Dentistry"],
+      "experience": 15,
+      "description": "Provides braces and advanced implant solutions."
+    },
+    {
+      "doctor_id": 17,
+      "full_name": "Dr. Victoria James",
+      "address": "Address 17",
+      "phone_number": "0900000017",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "victoria_james",
+      "dob": "1987-12-20",
+      "specialties": ["Pediatric Dentistry", "Preventive Dentistry"],
+      "experience": 8,
+      "description": "Helps children maintain strong and healthy teeth."
+    },
+    {
+      "doctor_id": 18,
+      "full_name": "Dr. Jonathan Ramirez",
+      "address": "Address 18",
+      "phone_number": "0900000018",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "jon_ramirez",
+      "dob": "1981-05-23",
+      "specialties": ["Restorative Dentistry", "Prosthodontics", "Endodontics"],
+      "experience": 13,
+      "description": "Expert in crowns, bridges, dentures, and tooth restoration."
+    },
+    {
+      "doctor_id": 19,
+      "full_name": "Dr. Hailey Cooper",
+      "address": "Address 19",
+      "phone_number": "0900000019",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "hailey_cooper",
+      "dob": "1986-03-30",
+      "specialties": ["Cosmetic Dentistry", "Pediatric Dentistry"],
+      "experience": 9,
+      "description": "Focuses on painless laser treatments and aesthetic dental care."
+    },
+    {
+      "doctor_id": 20,
+      "full_name": "Dr. Lucas Adams",
+      "address": "Address 20",
+      "phone_number": "0900000020",
+      "contract_signing_date": "2024-01-01",
+      "password": "pass",
+      "username": "lucas_adams",
+      "dob": "1978-04-17",
+      "specialties": ["Oral Surgery", "Implant Dentistry", "Pediatric Dentistry"],
+      "experience": 18,
+      "description": "Performs complex oral surgeries and advanced implant work."
+    }
+  ],
+  "services": [
+    {
+      "service_id": 1,
+      "service_name": "Orthodontics",
+      "duration": 60
+    },
+    {
+      "service_id": 2,
+      "service_name": "Pediatric Dentistry",
+      "duration": 45
+    },
+    {
+      "service_id": 3,
+      "service_name": "Endodontics",
+      "duration": 90
+    },
+    {
+      "service_id": 4,
+      "service_name": "Restorative Dentistry",
+      "duration": 50
+    },
+    {
+      "service_id": 5,
+      "service_name": "Cosmetic Dentistry",
+      "duration": 60
+    },
+    {
+      "service_id": 6,
+      "service_name": "Oral Surgery",
+      "duration": 120
+    },
+    {
+      "service_id": 7,
+      "service_name": "Implant Dentistry",
+      "duration": 90
+    }
+  ],
+  "doctor_service": [
+    {
+      "service_id": 1,
+      "doctors_id": [1, 3, 5, 6, 11, 12, 16]
+    },
+    {
+      "service_id": 2,
+      "doctors_id": [1, 2, 9, 13, 17, 19, 20]
+    },
+    {
+      "service_id": 3,
+      "doctors_id": [2, 10, 14, 18]
+    },
+    {
+      "service_id": 4,
+      "doctors_id": [2, 6, 15, 18]
+    },
+    {
+      "service_id": 5,
+      "doctors_id": [3, 7, 13, 19]
+    },
+    {
+      "service_id": 6,
+      "doctors_id": [4, 8, 14, 20]
+    },
+    {
+      "service_id": 7,
+      "doctors_id": [4, 8, 12, 16, 20]
+    }
+  ],
+  "work_shifts": [
+    { "start_time": "07:00", "end_time": "08:00" },
+    { "start_time": "08:00", "end_time": "09:00" },
+    { "start_time": "09:00", "end_time": "10:00" },
+    { "start_time": "10:00", "end_time": "11:00" },
+    { "start_time": "11:00", "end_time": "12:00" },
+    { "start_time": "12:00", "end_time": "13:00" },
+    { "start_time": "13:00", "end_time": "14:00" },
+    { "start_time": "14:00", "end_time": "15:00" },
+    { "start_time": "15:00", "end_time": "16:00" },
+    { "start_time": "16:00", "end_time": "17:00" },
+    { "start_time": "17:00", "end_time": "18:00" }
+  ],
+  "schedules": [
+    {
+      "schedule_id": 1,
+      "doctor_id": 1,
+      "date": "2025-12-10",
+      "work_shifts": { "id": 1, "status": "available" }
+    }
+  ]
+}

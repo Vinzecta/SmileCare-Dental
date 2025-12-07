@@ -3,7 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import { Router } from "express";
 
-import userRoutes from "./routes/user.routes.js";
+import patientRoutes from "./routes/patient.routes.js";
 import clinicRoutes from "./routes/clinic.routes.js";
 
 const app = express();
@@ -13,8 +13,8 @@ app.use(express.json());
 const router = Router();
 
 // Use routes
-app.use("/api/users", userRoutes);
-app.use("/api/clinics", clinicRoutes);
+app.use("/", patientRoutes);
+app.use("/", clinicRoutes);
 app.use("/", router);
 
 // GET /

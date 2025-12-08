@@ -4,6 +4,7 @@ import './App.css'; // The new CSS file we created above
 
 // Import your views
 import Home from './views/home/Home';
+import Appointments from './views/appointments/Appointments';
 import Services from './views/services/Services';
 import Login from './views/login/Login';
 
@@ -12,6 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/appointments" element={<Appointments />} />
         <Route path="/services" element={<Services />} />
         <Route path="/login" element={<Login />} />
         {/* You can route /register to Login as well since it handles both states */}

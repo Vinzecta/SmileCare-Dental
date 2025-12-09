@@ -57,4 +57,27 @@ router.get("/schedule", (req, res) => {
   });
 });
 
+// Get All Schedule
+// Example usage: http://localhost:5000/schedules => Trả về tất cả schedule, available hoặc unavailable
+router.get("/schedules", (req, res) => {
+  const fullSchedules = clinicData.schedules.map((schedule) => {
+    const doctor = clinicData.doctors.find(
+      (d) => d.doctor_id === schedule.doctor_id
+    );
+
+    const service = clinicData.services.find(
+      (s) => s.service_id === schedule.service_id
+    );
+
+    return {
+      ...schedule,
+      doctor: doctor || null,
+      service: service || null,
+    };
+  });
+
+  res.json({ schedules: fullSchedules });
+});
+
+
 export default router;

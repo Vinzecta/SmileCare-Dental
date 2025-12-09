@@ -57,4 +57,40 @@ router.get("/schedule", (req, res) => {
   });
 });
 
+// /doctor
+router.get("/doctors", (req, res) => {
+  return res.json(clinicData.doctors)
+});
+
+// /doctor-detail/:id
+router.get("/doctor-detail/:id", (req, res) => {
+  const doctorId = parseInt(req.params.id);
+  
+  const doctor = clinicData.doctors.find(
+    (d) => d.doctor_id === doctorId
+  );
+
+  if (!doctor) {
+    return res.status(404).json({ message: "Doctor not found" });
+  }
+
+  const serviceMappings = clinicData.doctor_service.filter((ds) =>
+    ds.doctors_id.includes(doctorId)
+  );
+
+  const services = serviceMappings.map((m) => {
+    const serviceInfo = clinicData.services.find(
+      (s) => s.service_id === m.service_id
+    );
+    return serviceInfo;
+  });
+
+  return res.json({
+    doctor,
+    services,
+    specialties: doctor.specialties,
+  });
+});
+
+
 export default router;

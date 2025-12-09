@@ -188,7 +188,7 @@ const AppointmentCard = ({ doctor, date, time, status, onDelete }) => {
   );
 };
 
-const App = () => {
+const Apppointments = () => {
   const [appointments, setAppointments] = useState([
     {
       id: 1,
@@ -408,4 +408,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Apppointments;

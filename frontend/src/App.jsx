@@ -7,6 +7,7 @@ import Home from './views/home/Home';
 import Appointments from './views/appointments/Appointments';
 import Services from './views/services/Services';
 import Login from './views/login/Login';
+import FindDoctor from './views/find doctor/FindDoctor';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/find-doctor" element={<FindDoctor />} />
         <Route path="/login" element={<Login />} />
         {/* You can route /register to Login as well since it handles both states */}
         <Route path="/register" element={<Login />} />

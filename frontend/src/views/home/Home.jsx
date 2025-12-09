@@ -1,8 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { fetchServices } from '../../api/clinicApi.js';
+
+const imagePool = [
+  '/service1.jpg',
+  '/service2.jpg',
+  '/service3.jpg',
+  '/service4.jpg',
+  '/service5.jpg',
+  '/service6.jpg',
+];
 
 export default function Home() {
+  const [services, setServices] = useState([]);
+  const [loadingServices, setLoadingServices] = useState(true);
+  const [servicesError, setServicesError] = useState('');
+
+  useEffect(() => {
+    let ignore = false;
+
+    const loadServices = async () => {
+      try {
+        setLoadingServices(true);
+        const data = await fetchServices();
+        if (!ignore) {
+          setServices(Array.isArray(data) ? data : []);
+        }
+      } catch (error) {
+        if (!ignore) {
+          setServicesError('We were unable to load featured services.');
+        }
+      } finally {
+        if (!ignore) {
+          setLoadingServices(false);
+        }
+      }
+    };
+
+    loadServices();
+
+    return () => {
+      ignore = true;
+    };
+  }, []);
+
+  const featuredServices = services.slice(0, 3);
+
   return (
     <div className="page-container bg-beige">
       <Header />
@@ -70,62 +114,36 @@ export default function Home() {
       <section className="services-preview">
         <h2 className="text-center font-serif section-title-lg">Our Medical Services</h2>
 
-        <div className="services-grid-home">
-          {/* Pediatrics Card */}
-          <div className="service-card">
-            <div className="service-img-wrapper">
-              <img
-                src="service1.jpg"
-                alt="Pediatrics"
-              />
-            </div>
-            <h3 className="font-serif">Pediatrics</h3>
-            <p>
-              Comprehensive pediatric care for infants, children, and adolescents. Our pediatricians provide
-              vaccinations, growth monitoring, illness treatment, and developmental assessments in a child-friendly
-              environment.
-            </p>
-            <button className="btn btn-teal-sm">
-              Book Appointment
-            </button>
+        {loadingServices ? (
+          <p className="service-status">Loading featured services...</p>
+        ) : servicesError ? (
+          <p className="service-status error">{servicesError}</p>
+        ) : featuredServices.length === 0 ? (
+          <p className="service-status">Services will be showcased here soon.</p>
+        ) : (
+          <div className="services-grid-home">
+            {featuredServices.map((service, index) => {
+              const imageSrc = imagePool[index % imagePool.length];
+              return (
+                <div key={service.service_id} className="service-card">
+                  <div className="service-img-wrapper">
+                    <img
+                      src={imageSrc}
+                      alt={service.service_name}
+                    />
+                  </div>
+                  <h3 className="font-serif">{service.service_name}</h3>
+                  <p>
+                    Typical visit length: {service.duration} minutes
+                  </p>
+                  <button className="btn btn-teal-sm">
+                    Book Appointment
+                  </button>
+                </div>
+              );
+            })}
           </div>
-
-          {/* Orthopedics Card */}
-          <div className="service-card">
-            <div className="service-img-wrapper">
-              <img
-                src="service2.jpg"
-                alt="Orthopedics"
-              />
-            </div>
-            <h3 className="font-serif">Orthopedics</h3>
-            <p>
-              Expert treatment for musculoskeletal conditions, sports injuries, and bone disorders. Our orthopedic
-              specialists offer diagnosis, therapy, and surgical solutions to restore mobility and reduce pain.
-            </p>
-            <button className="btn btn-teal-sm">
-              Book Appointment
-            </button>
-          </div>
-
-          {/* Dermatology Card */}
-          <div className="service-card">
-            <div className="service-img-wrapper">
-              <img
-                src="service3.jpg"
-                alt="Dermatology"
-              />
-            </div>
-            <h3 className="font-serif">Dermatology</h3>
-            <p>
-              Professional dermatological services for all skin conditions. From acne treatment and skin allergies to
-              cosmetic procedures, our dermatologists help you achieve healthy, radiant skin.
-            </p>
-            <button className="btn btn-teal-sm">
-              Book Appointment
-            </button>
-          </div>
-        </div>
+        )}
       </section>
 
       {/* Section 3: Testimonials */}

@@ -78,10 +78,54 @@ body {
 
 .nav-link:hover { color: #2d4a5e; }
 
+.auth-area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 14rem;
+}
+
 .auth-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem; /* gap-2 */
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #f5efe9;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+}
+
+.user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid #4a5d5e;
+  background-color: white;
+}
+
+.user-name {
+  font-size: 0.95rem;
+  color: #2d2d2d;
+  font-weight: 600;
+}
+
+.logout-btn {
+  border: none;
+  background: transparent;
+  color: #4a5568;
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.logout-btn:hover {
+  color: #2d3544;
 }
 
 .btn {
@@ -386,6 +430,16 @@ body {
   margin: 0 auto;
 }
 
+.service-status {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1rem;
+}
+
+.service-status.error {
+  color: #b34747;
+}
+
 .service-card-page {
   display: flex;
   flex-direction: column;
@@ -553,6 +607,14 @@ body {
 
 .form-input:focus {
   border-color: #9a7b6b;
+}
+
+.form-error {
+  font-size: 0.85rem;
+  color: #c0392b;
+  background-color: #fdecea;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.5rem;
 }
 
 .submit-btn {

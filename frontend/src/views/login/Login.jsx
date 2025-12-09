@@ -1,9 +1,35 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { useAuth } from "../../context/AuthContext.jsx"
 
 export default function Login() {
   const [activeTab, setActiveTab] = useState("login")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const navigate = useNavigate()
+  const { login } = useAuth()
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    setError("")
+
+    if (!email || !password) {
+      setError("Please provide both email and password.")
+      return
+    }
+
+    try {
+      setIsSubmitting(true)
+      await login({ email, password })
+      navigate("/")
+    } catch (authError) {
+      setError(authError.message ?? "Unable to log in. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <div className="login-container">
@@ -71,7 +97,7 @@ export default function Login() {
           </div>
 
           {/* Email/Password Form */}
-          <form className="login-form">
+          <form className="login-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label className="form-label">Email address</label>
               <input
@@ -92,8 +118,10 @@ export default function Login() {
               />
             </div>
 
+            {error ? <p className="form-error">{error}</p> : null}
+
             <button type="submit" className="submit-btn">
-              Log In
+              {isSubmitting ? "Signing in..." : "Log In"}
             </button>
           </form>
         </div>

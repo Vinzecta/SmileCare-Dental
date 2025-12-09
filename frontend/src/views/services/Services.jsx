@@ -1,47 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { fetchServices } from '../../api/clinicApi.js';
 
-const services = [
-  {
-    title: "Cardiology",
-    description:
-      "Expert Cardiac Care And Monitoring. Our Cardiologists Offer Comprehensive Heart Health Evaluations, Treatment, And Ongoing Management For All Cardiovascular Conditions.",
-    image: "service1.jpg",
-  },
-  {
-    title: "Orthopedics",
-    description:
-      "Expert Treatment For Musculoskeletal Conditions, Sports Injuries, And Bone Disorders. Our Orthopedic Specialists Offer Diagnosis, Therapy, And Surgical Solutions To Restore Mobility And Reduce Pain.",
-    image: "service2.jpg",
-  },
-  {
-    title: "Lorem Ipsum Is",
-    description:
-      "Professional Dermatological Services For All Skin Conditions. From Acne Treatment And Skin Allergies To Cosmetic Procedures, Our Dermatologists Help You Achieve Healthy, Radiant Skin.",
-    image: "service3.jpg",
-  },
-  {
-    title: "Cardiology",
-    description:
-      "Expert Cardiac Care And Monitoring. Our Cardiologists Offer Comprehensive Heart Health Evaluations, Treatment, And Ongoing Management For All Cardiovascular Conditions.",
-    image: "service4.jpg",
-  },
-  {
-    title: "General Medicine",
-    description:
-      "Complete Health Assessments And Preventive Care. Our Experienced Doctors Provide Thorough Examinations, Diagnosis, And Treatment Plans Tailored To Your Needs.",
-    image: "service5.jpg",
-  },
-  {
-    title: "Neurology",
-    description:
-      "Advanced Care For Nervous System Disorders. Our Neurologists Diagnose And Treat Conditions Affecting The Brain, Spine, And Nerves With Precision And Compassion.",
-    image: "service6.jpg",
-  },
+const imagePool = [
+  '/service1.jpg',
+  '/service2.jpg',
+  '/service3.jpg',
+  '/service4.jpg',
+  '/service5.jpg',
+  '/service6.jpg',
 ];
 
 export default function Services() {
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    let isCancelled = false;
+
+    const loadServices = async () => {
+      try {
+        setLoading(true);
+        const data = await fetchServices();
+        if (!isCancelled) {
+          setServices(Array.isArray(data) ? data : []);
+        }
+      } catch (err) {
+        if (!isCancelled) {
+          setError('We could not load the services right now. Please try again later.');
+        }
+      } finally {
+        if (!isCancelled) {
+          setLoading(false);
+        }
+      }
+    };
+
+    loadServices();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, []);
+
   return (
     <div className="services-page-container">
       <Header />
@@ -51,23 +54,36 @@ export default function Services() {
         <h1 className="font-serif text-center section-title-lg" style={{ marginBottom: '4rem' }}>Our Medical Services</h1>
 
         {/* Services Grid */}
-        <div className="services-grid-page">
-          {services.map((service, index) => (
-            <div key={index} className="service-card-page">
-              <div className="service-img-page">
-                <img
-                  src={service.image || "/placeholder.svg"}
-                  alt={service.title}
-                />
-              </div>
-              <h3 className="font-serif" style={{ fontSize: '1.25rem', color: '#9a7b6b', marginBottom: '0.75rem' }}>{service.title}</h3>
-              <p style={{ color: '#6b6b6b', fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '1.5rem', padding: '0 0.5rem' }}>{service.description}</p>
-              <button className="btn btn-teal-sm">
-                Book Appointment
-              </button>
-            </div>
-          ))}
-        </div>
+        {loading ? (
+          <p className="service-status">Loading services...</p>
+        ) : error ? (
+          <p className="service-status error">{error}</p>
+        ) : services.length === 0 ? (
+          <p className="service-status">Services will be listed here soon.</p>
+        ) : (
+          <div className="services-grid-page">
+            {services.map((service, index) => {
+              const imageSrc = imagePool[index % imagePool.length];
+              return (
+                <div key={service.service_id} className="service-card-page">
+                  <div className="service-img-page">
+                    <img
+                      src={imageSrc}
+                      alt={service.service_name}
+                    />
+                  </div>
+                  <h3 className="font-serif" style={{ fontSize: '1.25rem', color: '#9a7b6b', marginBottom: '0.75rem' }}>{service.service_name}</h3>
+                  <p style={{ color: '#6b6b6b', fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '1.5rem', padding: '0 0.5rem' }}>
+                    Typical appointment duration: {service.duration} minutes
+                  </p>
+                  <button className="btn btn-teal-sm">
+                    Book Appointment
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </main>
 
       <Footer />

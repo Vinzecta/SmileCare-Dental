@@ -86,7 +86,7 @@ export default function Header() {
       {/* Navigation */}
       <nav className="nav-menu">
         <Link to="/" className="nav-link">Home</Link>
-        <Link to="#" className="nav-link">Find Doctor</Link>
+        <Link to="/find-doctor" className="nav-link">Find Doctor</Link>
         <Link to="/appointments" className="nav-link">Appointment</Link>
         <Link to="/services" className="nav-link">Services</Link>
         <Link to="#" className="nav-link">Prices</Link>

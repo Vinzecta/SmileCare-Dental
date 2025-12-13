@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Popup from "./PopUp";
 
 /* ===== Utils ===== */
 function formatDateToInput(date) {
@@ -21,6 +23,8 @@ export default function AppointmentPopup({ onClose, doctor_id }) {
 
   const [timeSlots, setTimeSlots] = useState([]);
   const [selectedSlot, setSelectedSlot] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(false);
+  const navigate = useNavigate();
 
   /* ===== Form state ===== */
   const [form, setForm] = useState({
@@ -140,17 +144,8 @@ export default function AppointmentPopup({ onClose, doctor_id }) {
         body : JSON.stringify({scheduleId: selectedSlot.schedule_id, patientId: user.id }),
       });
 
-      const data = res.json();
-      console.log(data);
-
-      if (!res.ok) {
-        alert("Fail to submit the data");
-      } else {
-        // setTimeSlots([]);
-        // setSelectedSlot(null);
-        // setForm({});
-        // setErrors({});
-      }
+      const data = await res.json();
+      setSuccessMessage(true);
     } catch (err) {
       alert("Fail submit the data");
     }
@@ -294,6 +289,15 @@ export default function AppointmentPopup({ onClose, doctor_id }) {
           </button>
         </div>
       </div>
+
+      {
+        successMessage ? <Popup onClose={() => navigate("/appointments")}
+                                onNavigate={() => navigate("/appointments")}
+                                title={"Create appointment successfully"}
+                                content={"Click continue button to go to appointments page"}
+                                icon={'successful'}
+                                action={'Continue'} /> : null
+      }
     </div>
   );
 }

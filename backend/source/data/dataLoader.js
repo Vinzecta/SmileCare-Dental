@@ -21,5 +21,9 @@ const filePath = path.join(__dirname, "dental_clinic_data.json");
 const jsonString = fs.readFileSync(filePath, "utf-8");
 const clinicData = JSON.parse(jsonString);
 
+if (!Array.isArray(clinicData.appointments)) {
+	clinicData.appointments = [];
+}
+
 export default clinicData;
 

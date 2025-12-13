@@ -57,4 +57,110 @@ router.get("/schedule", (req, res) => {
   });
 });
 
+// Get All Schedule
+// Example usage: http://localhost:5000/schedules => Trả về tất cả schedule, available hoặc unavailable
+router.get("/schedules", (req, res) => {
+  const fullSchedules = clinicData.schedules.map((schedule) => {
+    const doctor = clinicData.doctors.find(
+      (d) => d.doctor_id === schedule.doctor_id
+    );
+
+    const service = clinicData.services.find(
+      (s) => s.service_id === schedule.service_id
+    );
+
+    return {
+      ...schedule,
+      doctor: doctor || null,
+      service: service || null,
+    };
+  });
+
+  res.json({ schedules: fullSchedules });
+});
+
+// /doctor
+router.get("/doctors", (req, res) => {
+  return res.json(clinicData.doctors)
+});
+
+// /doctor-detail/:id
+router.get("/doctor-detail/:id", (req, res) => {
+  const doctorId = parseInt(req.params.id);
+  
+  const doctor = clinicData.doctors.find(
+    (d) => d.doctor_id === doctorId
+  );
+
+  if (!doctor) {
+    return res.status(404).json({ message: "Doctor not found" });
+  }
+
+  const serviceMappings = clinicData.doctor_service.filter((ds) =>
+    ds.doctors_id.includes(doctorId)
+  );
+
+  const services = serviceMappings.map((m) => {
+    const serviceInfo = clinicData.services.find(
+      (s) => s.service_id === m.service_id
+    );
+    return serviceInfo;
+  });
+
+  return res.json({
+    doctor,
+    services,
+    specialties: doctor.specialties,
+  });
+});
+
+router.get("/doctors/:doctorId/working-hours", (req, res) => {
+  const doctorId = Number(req.params.doctorId);
+  const { date } = req.query;
+
+  /* ===== Find doctor ===== */
+  const doctor = clinicData.doctors.find(
+    (d) => d.doctor_id === doctorId
+  );
+
+  if (!doctor) {
+    return res.status(404).json({ message: "Doctor not found" });
+  }
+
+  /* ===== Filter schedules ===== */
+  const schedules = clinicData.schedules.filter(
+    (s) =>
+      s.doctor_id === doctorId &&
+      (!date || s.date === date)
+  );
+
+  /* ===== Map schedules ===== */
+  const result = schedules.map((s) => {
+    const shift = clinicData.work_shifts.find(
+      (w) => w.id === s.work_shifts_id
+    );
+
+    if (!shift) {
+      return null;
+    }
+
+    return {
+      schedule_id: s.schedule_id, // ⭐ BẮT BUỘC
+      date: s.date,
+      status: s.status,
+      shift: {
+        start_time: shift.start_time,
+        end_time: shift.end_time
+      }
+    };
+  }).filter(Boolean);
+
+  return res.json({
+    doctor_id: doctor.doctor_id,
+    full_name: doctor.full_name,
+    working_hours: doctor.working_hours,
+    schedules: result
+  });
+});
+
 export default router;

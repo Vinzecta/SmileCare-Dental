@@ -3,6 +3,7 @@
     {
       "doctor_id": 1,
       "full_name": "Dr. Emily Parker",
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400",
       "address": "Address 1",
       "phone_number": "0900000001",
       "contract_signing_date": "2024-01-01",
@@ -11,11 +12,39 @@
       "dob": "1982-03-12",
       "specialties": ["Orthodontics", "Pediatric Dentistry"],
       "experience": 12,
-      "description": "Experienced orthodontist specializing in braces and children's dental care."
+      "description": "Experienced orthodontist specializing in braces and children's dental care.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 2,
       "full_name": "Dr. Jacob Reed",
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400",
       "address": "Address 2",
       "phone_number": "0900000002",
       "contract_signing_date": "2024-01-01",
@@ -24,11 +53,39 @@
       "dob": "1980-06-08",
       "specialties": ["Endodontics", "Restorative Dentistry", "Pediatric Dentistry"],
       "experience": 14,
-      "description": "Expert in root canal treatments and restoring damaged teeth."
+      "description": "Expert in root canal treatments and restoring damaged teeth.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 3,
       "full_name": "Dr. Olivia Bennett",
+      "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400",
       "address": "Address 3",
       "phone_number": "0900000003",
       "contract_signing_date": "2024-01-01",
@@ -37,11 +94,39 @@
       "dob": "1985-11-02",
       "specialties": ["Cosmetic Dentistry", "Orthodontics"],
       "experience": 10,
-      "description": "Focused on smile design, veneers, and dental prosthetics."
+      "description": "Focused on smile design, veneers, and dental prosthetics.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 4,
       "full_name": "Dr. Michael Carter",
+      "image": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400",
       "address": "Address 4",
       "phone_number": "0900000004",
       "contract_signing_date": "2024-01-01",
@@ -50,11 +135,39 @@
       "dob": "1979-01-25",
       "specialties": ["Oral Surgery", "Implant Dentistry"],
       "experience": 16,
-      "description": "Specializes in surgical tooth extractions and dental implants."
+      "description": "Specializes in surgical tooth extractions and dental implants.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 5,
       "full_name": "Dr. Sophia Collins",
+      "image": "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=400",
       "address": "Address 5",
       "phone_number": "0900000005",
       "contract_signing_date": "2024-01-01",
@@ -63,11 +176,39 @@
       "dob": "1984-09-09",
       "specialties": ["Periodontics", "Orthodontics"],
       "experience": 11,
-      "description": "Focuses on gum disease, laser treatments, and tissue regeneration."
+      "description": "Focuses on gum disease, laser treatments, and tissue regeneration.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 6,
       "full_name": "Dr. Daniel Hughes",
+      "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400",
       "address": "Address 6",
       "phone_number": "0900000006",
       "contract_signing_date": "2024-01-01",
@@ -76,11 +217,39 @@
       "dob": "1981-02-15",
       "specialties": ["Orthodontics", "Restorative Dentistry"],
       "experience": 13,
-      "description": "Provides comprehensive dental care and restorative treatments."
+      "description": "Provides comprehensive dental care and restorative treatments.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 7,
       "full_name": "Dr. Ava Mitchell",
+      "image": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=400",
       "address": "Address 7",
       "phone_number": "0900000007",
       "contract_signing_date": "2024-01-01",
@@ -89,11 +258,39 @@
       "dob": "1987-04-18",
       "specialties": ["Cosmetic Dentistry", "Whitening Treatments"],
       "experience": 8,
-      "description": "Expert in aesthetic dental procedures and smile enhancement."
+      "description": "Expert in aesthetic dental procedures and smile enhancement.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 8,
       "full_name": "Dr. Benjamin Scott",
+      "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400",
       "address": "Address 8",
       "phone_number": "0900000008",
       "contract_signing_date": "2024-01-01",
@@ -102,11 +299,39 @@
       "dob": "1978-10-10",
       "specialties": ["Implant Dentistry", "Oral Surgery"],
       "experience": 18,
-      "description": "Highly skilled in implant surgeries and complex oral procedures."
+      "description": "Highly skilled in implant surgeries and complex oral procedures.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 9,
       "full_name": "Dr. Chloe Watson",
+      "image": "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=400",
       "address": "Address 9",
       "phone_number": "0900000009",
       "contract_signing_date": "2024-01-01",
@@ -115,11 +340,39 @@
       "dob": "1986-05-14",
       "specialties": ["Pediatric Dentistry", "Preventive Dentistry"],
       "experience": 9,
-      "description": "Provides gentle dental care tailored for children and teens."
+      "description": "Provides gentle dental care tailored for children and teens.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 10,
       "full_name": "Dr. Ethan Brooks",
+      "image": "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=400",
       "address": "Address 10",
       "phone_number": "0900000010",
       "contract_signing_date": "2024-01-01",
@@ -128,11 +381,39 @@
       "dob": "1977-12-22",
       "specialties": ["Endodontics", "Oral Diagnosis"],
       "experience": 19,
-      "description": "Expert in diagnosing dental pain and performing root canal therapy."
+      "description": "Expert in diagnosing dental pain and performing root canal therapy.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 11,
       "full_name": "Dr. Lily Anderson",
+      "image": "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=400",
       "address": "Address 11",
       "phone_number": "0900000011",
       "contract_signing_date": "2024-01-01",
@@ -141,11 +422,39 @@
       "dob": "1983-03-09",
       "specialties": ["Orthodontics", "General Dentistry"],
       "experience": 12,
-      "description": "Provides braces and aligners, along with routine dental care."
+      "description": "Provides braces and aligners, along with routine dental care.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 12,
       "full_name": "Dr. Samuel Turner",
+      "image": "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=400",
       "address": "Address 12",
       "phone_number": "0900000012",
       "contract_signing_date": "2024-01-01",
@@ -154,11 +463,39 @@
       "dob": "1982-07-27",
       "specialties": ["Orthodontics", "Implant Dentistry"],
       "experience": 12,
-      "description": "Specializes in gum treatment and implant placement."
+      "description": "Specializes in gum treatment and implant placement.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 13,
       "full_name": "Dr. Grace Morgan",
+      "image": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=400",
       "address": "Address 13",
       "phone_number": "0900000013",
       "contract_signing_date": "2024-01-01",
@@ -167,11 +504,39 @@
       "dob": "1988-11-11",
       "specialties": ["Cosmetic Dentistry", "Pediatric Dentistry"],
       "experience": 7,
-      "description": "Focuses on children's dental care and cosmetic enhancements."
+      "description": "Focuses on children's dental care and cosmetic enhancements.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 14,
       "full_name": "Dr. Henry Foster",
+      "image": "https://images.unsplash.com/photo-1584467735815-f778f274e296?w=400",
       "address": "Address 14",
       "phone_number": "0900000014",
       "contract_signing_date": "2024-01-01",
@@ -180,11 +545,39 @@
       "dob": "1976-02-02",
       "specialties": ["Oral Surgery", "Endodontics"],
       "experience": 20,
-      "description": "Handles complex surgeries and root canal treatments."
+      "description": "Handles complex surgeries and root canal treatments.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 15,
       "full_name": "Dr. Natalie Rivera",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
       "address": "Address 15",
       "phone_number": "0900000015",
       "contract_signing_date": "2024-01-01",
@@ -193,11 +586,39 @@
       "dob": "1984-08-04",
       "specialties": ["General Dentistry", "Restorative Dentistry"],
       "experience": 11,
-      "description": "Manages routine checkups and dental restorations."
+      "description": "Manages routine checkups and dental restorations.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 16,
       "full_name": "Dr. Andrew Hayes",
+      "image": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=400",
       "address": "Address 16",
       "phone_number": "0900000016",
       "contract_signing_date": "2024-01-01",
@@ -206,11 +627,39 @@
       "dob": "1979-09-29",
       "specialties": ["Orthodontics", "Implant Dentistry"],
       "experience": 15,
-      "description": "Provides braces and advanced implant solutions."
+      "description": "Provides braces and advanced implant solutions.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 17,
       "full_name": "Dr. Victoria James",
+      "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400",
       "address": "Address 17",
       "phone_number": "0900000017",
       "contract_signing_date": "2024-01-01",
@@ -219,11 +668,39 @@
       "dob": "1987-12-20",
       "specialties": ["Pediatric Dentistry", "Preventive Dentistry"],
       "experience": 8,
-      "description": "Helps children maintain strong and healthy teeth."
+      "description": "Helps children maintain strong and healthy teeth.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 18,
       "full_name": "Dr. Jonathan Ramirez",
+      "image": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=400",
       "address": "Address 18",
       "phone_number": "0900000018",
       "contract_signing_date": "2024-01-01",
@@ -232,11 +709,39 @@
       "dob": "1981-05-23",
       "specialties": ["Restorative Dentistry", "Prosthodontics", "Endodontics"],
       "experience": 13,
-      "description": "Expert in crowns, bridges, dentures, and tooth restoration."
+      "description": "Expert in crowns, bridges, dentures, and tooth restoration.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 19,
       "full_name": "Dr. Hailey Cooper",
+      "image": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=400",
       "address": "Address 19",
       "phone_number": "0900000019",
       "contract_signing_date": "2024-01-01",
@@ -245,11 +750,39 @@
       "dob": "1986-03-30",
       "specialties": ["Cosmetic Dentistry", "Pediatric Dentistry"],
       "experience": 9,
-      "description": "Focuses on painless laser treatments and aesthetic dental care."
+      "description": "Focuses on painless laser treatments and aesthetic dental care.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     },
     {
       "doctor_id": 20,
       "full_name": "Dr. Lucas Adams",
+      "image": "https://images.unsplash.com/photo-1612531386530-97286d97c2d2?w=400",
       "address": "Address 20",
       "phone_number": "0900000020",
       "contract_signing_date": "2024-01-01",
@@ -258,7 +791,34 @@
       "dob": "1978-04-17",
       "specialties": ["Oral Surgery", "Implant Dentistry", "Pediatric Dentistry"],
       "experience": 18,
-      "description": "Performs complex oral surgeries and advanced implant work."
+      "description": "Performs complex oral surgeries and advanced implant work.",
+      "education": [
+        "DDS – Harvard School of Dental Medicine",
+        "Master of Orthodontics – University of Michigan",
+        "Certified Pediatric Dental Specialist"
+      ],
+
+      "experience_list": [
+        "Over 12 years providing orthodontic treatment for children",
+        "Led community dental awareness programs for kids",
+        "Expert in early-age growth modification and braces"
+      ],
+
+      "awards": [
+        "Top Pediatric Orthodontist Award 2023",
+        "Harvard Dental Excellence Scholarship",
+        "Community Service Recognition 2022"
+      ],
+
+      "community": [
+        "Volunteer doctor at Children's Dental Care Foundation",
+        "Speaker at local schools for dental hygiene education"
+      ],
+
+      "working_hours": [
+        "Monday – Friday: 08:00 – 17:00",
+        "Saturday: 08:00 – 12:00"
+      ]
     }
   ],
   "services": [
@@ -329,24 +889,251 @@
     }
   ],
   "work_shifts": [
-    { "start_time": "07:00", "end_time": "08:00" },
-    { "start_time": "08:00", "end_time": "09:00" },
-    { "start_time": "09:00", "end_time": "10:00" },
-    { "start_time": "10:00", "end_time": "11:00" },
-    { "start_time": "11:00", "end_time": "12:00" },
-    { "start_time": "12:00", "end_time": "13:00" },
-    { "start_time": "13:00", "end_time": "14:00" },
-    { "start_time": "14:00", "end_time": "15:00" },
-    { "start_time": "15:00", "end_time": "16:00" },
-    { "start_time": "16:00", "end_time": "17:00" },
-    { "start_time": "17:00", "end_time": "18:00" }
+    {"id": 1,  "start_time": "07:00", "end_time": "08:00" },
+    {"id": 2,  "start_time": "08:00", "end_time": "09:00" },
+    {"id": 3,  "start_time": "09:00", "end_time": "10:00" },
+    {"id": 4,  "start_time": "10:00", "end_time": "11:00" },
+    {"id": 5,  "start_time": "11:00", "end_time": "12:00" },
+    {"id": 6,  "start_time": "12:00", "end_time": "13:00" },
+    {"id": 7,  "start_time": "13:00", "end_time": "14:00" },
+    {"id": 8,  "start_time": "14:00", "end_time": "15:00" },
+    {"id": 9,  "start_time": "15:00", "end_time": "16:00" },
+    {"id": 10, "start_time": "16:00", "end_time": "17:00" },
+    {"id": 11, "start_time": "17:00", "end_time": "18:00" }
   ],
   "schedules": [
+  {
+    "schedule_id": 1,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-13",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 2,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-13",
+    "work_shifts_id": 3
+  },
+  {
+    "schedule_id": 3,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-13",
+    "work_shifts_id": 4
+  },
+  {
+    "schedule_id": 4,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-13",
+    "work_shifts_id": 5
+  },
+
+  {
+    "schedule_id": 5,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-14",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 6,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-14",
+    "work_shifts_id": 3
+  },
+  {
+    "schedule_id": 7,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-14",
+    "work_shifts_id": 6
+  },
+  {
+    "schedule_id": 8,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-14",
+    "work_shifts_id": 7
+  },
+
+  {
+    "schedule_id": 9,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-15",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 10,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-15",
+    "work_shifts_id": 3
+  },
+  {
+    "schedule_id": 11,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-15",
+    "work_shifts_id": 4
+  },
+  {
+    "schedule_id": 12,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-15",
+    "work_shifts_id": 8
+  }
+],
+
+    "patients": [
     {
-      "schedule_id": 1,
-      "doctor_id": 1,
-      "date": "2025-12-10",
-      "work_shifts": { "id": 1, "status": "available" }
+      "id": 1,
+      "username": "user1",
+      "password": "1234",
+      "fullname": "John Doe",
+      "gender"  : "Male",
+      "address" : "Address 1",
+      "phone_number": "1234567890",
+      "ssn"     : "123456789012",
+      "dob"     : "2004-04-07",
+      "blood_type" : "A+"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "abcd",
+      "fullname": "Jane Smith",
+      "gender": "Female",
+      "address": "Address 2",
+      "phone_number": "0987654321",
+      "ssn": "987654321098",
+      "dob": "1999-11-15",
+      "blood_type": "B+"
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "password": "pass123",
+      "fullname": "Michael Johnson",
+      "gender": "Male",
+      "address": "Address 3",
+      "phone_number": "0912345678",
+      "ssn": "456789123456",
+      "dob": "2002-06-20",
+      "blood_type": "O-"
+    },
+    {
+      "id": 4,
+      "username": "user4",
+      "password": "qwerty",
+      "fullname": "Emily Davis",
+      "gender": "Female",
+      "address": "Address 4",
+      "phone_number": "0934567812",
+      "ssn": "654321987654",
+      "dob": "2001-02-10",
+      "blood_type": "AB+"
+    },
+    {
+      "id": 5,
+      "username": "user5",
+      "password": "hello123",
+      "fullname": "David Wilson",
+      "gender": "Male",
+      "address": "Address 5",
+      "phone_number": "0978123456",
+      "ssn": "321654987321",
+      "dob": "1998-09-03",
+      "blood_type": "A-"
+    },
+    {
+      "id": 6,
+      "username": "user6",
+      "password": "test567",
+      "fullname": "Sophia Martinez",
+      "gender": "Female",
+      "address": "Address 6",
+      "phone_number": "0956741238",
+      "ssn": "789123456789",
+      "dob": "2003-12-01",
+      "blood_type": "B-"
+    },
+    {
+      "id": 7,
+      "username": "user7",
+      "password": "pass789",
+      "fullname": "Daniel Anderson",
+      "gender": "Male",
+      "address": "Address 7",
+      "phone_number": "0945123678",
+      "ssn": "852963741258",
+      "dob": "2000-03-18",
+      "blood_type": "O+"
+    },
+    {
+      "id": 8,
+      "username": "user8",
+      "password": "mypassword",
+      "fullname": "Olivia Thomas",
+      "gender": "Female",
+      "address": "Address 8",
+      "phone_number": "0906789123",
+      "ssn": "147258369147",
+      "dob": "2005-07-22",
+      "blood_type": "AB-"
+    },
+    {
+      "id": 9,
+      "username": "user9",
+      "password": "xyz12345",
+      "fullname": "Christopher Lee",
+      "gender": "Male",
+      "address": "Address 9",
+      "phone_number": "0881234567",
+      "ssn": "369258147369",
+      "dob": "1997-05-14",
+      "blood_type": "A+"
+    },
+    {
+      "id": 10,
+      "username": "user10",
+      "password": "alpha456",
+      "fullname": "Ava Harris",
+      "gender": "Female",
+      "address": "Address 10",
+      "phone_number": "0823456789",
+      "ssn": "951753852456",
+      "dob": "2002-10-30",
+      "blood_type": "B+"
+    },
+    {
+      "id": 11,
+      "username": "user11",
+      "password": "secure999",
+      "fullname": "James Clark",
+      "gender": "Male",
+      "address": "Address 11",
+      "phone_number": "0812983476",
+      "ssn": "258147369258",
+      "dob": "1996-08-26",
+      "blood_type": "O+"
     }
   ]
 }

@@ -1,7 +1,65 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AlertTriangle } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { cancelAppointment, fetchAllSchedules, fetchAppointmentsByPatient } from '../../api/clinicApi';
+
+const SHIFT_TIME_MAP = {
+  1: { start: '07:00', end: '08:00' },
+  2: { start: '08:00', end: '09:00' },
+  3: { start: '09:00', end: '10:00' },
+  4: { start: '10:00', end: '11:00' },
+  5: { start: '11:00', end: '12:00' },
+  6: { start: '12:00', end: '13:00' },
+  7: { start: '13:00', end: '14:00' },
+  8: { start: '14:00', end: '15:00' },
+  9: { start: '15:00', end: '16:00' },
+  10: { start: '16:00', end: '17:00' },
+  11: { start: '17:00', end: '18:00' }
+};
+
+const formatShiftLabel = (workShiftId) => {
+  if (!workShiftId) {
+    return 'Time not assigned';
+  }
+
+  const slot = SHIFT_TIME_MAP[workShiftId];
+  if (!slot) {
+    return `Shift ${workShiftId}`;
+  }
+
+  return `${slot.start} - ${slot.end}`;
+};
+
+const formatDateLabel = (value) => {
+  if (!value) {
+    return 'Date not assigned';
+  }
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return date.toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+};
+
+const toDisplayStatus = (status) => {
+  if (!status) {
+    return 'Unknown';
+  }
+
+  const lower = status.toLowerCase();
+  if (lower.length === 0) {
+    return 'Unknown';
+  }
+
+  return lower.charAt(0).toUpperCase() + lower.slice(1);
+};
 
 const CancelPopup = ({ isOpen, onClose, onConfirm }) => {
   if (!isOpen) return null;
@@ -143,18 +201,27 @@ const CancelPopup = ({ isOpen, onClose, onConfirm }) => {
 };
 
 const AppointmentCard = ({ doctor, date, time, status, onDelete }) => {
-  const getStatusColor = (status) => {
-    switch(status.toLowerCase()) {
+  const getStatusColor = (rawStatus) => {
+    const normalized = rawStatus ? rawStatus.toLowerCase() : 'unknown';
+
+    switch(normalized) {
       case 'confirmed':
+      case 'active':
         return '#4FC3F7';
       case 'pending':
         return '#FFD54F';
       case 'finished':
+      case 'completed':
         return '#81C784';
+      case 'cancel':
+      case 'cancelled':
+        return '#E57373';
       default:
         return '#9E9E9E';
     }
   };
+
+  const statusLabel = toDisplayStatus(status);
 
   return (
     <div className="appointment-card">
@@ -164,7 +231,7 @@ const AppointmentCard = ({ doctor, date, time, status, onDelete }) => {
       </div>
       <div className="card-body">
         <div className="appointment-info">
-          <p className="info-label">Appointment Date: <span className="info-value">{time}</span></p>
+          <p className="info-label">Time: <span className="info-value">{time}</span></p>
           <div className="status-row">
             <span className="info-label">Status:</span>
             <span 
@@ -174,7 +241,7 @@ const AppointmentCard = ({ doctor, date, time, status, onDelete }) => {
                 color: '#fff'
               }}
             >
-              {status}
+              {statusLabel}
             </span>
           </div>
         </div>
@@ -188,45 +255,129 @@ const AppointmentCard = ({ doctor, date, time, status, onDelete }) => {
   );
 };
 
-const App = () => {
-  const [appointments, setAppointments] = useState([
-    {
-      id: 1,
-      doctor: 'Dr. Lmao',
-      date: '27/11/2025',
-      time: '30/11/2025, 1:00PM',
-      status: 'Confirmed'
-    },
-    {
-      id: 2,
-      doctor: 'Dr. Lmao',
-      date: '27/11/2025',
-      time: '30/11/2025, 1:00PM',
-      status: 'Pending'
-    },
-    {
-      id: 3,
-      doctor: 'Dr. Lmao',
-      date: '27/11/2025',
-      time: '30/11/2025, 1:00PM',
-      status: 'Finished'
-    }
-  ]);
-
+const Apppointments = () => {
+  const [appointments, setAppointments] = useState([]);
+  const [patientId, setPatientId] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [appointmentToDelete, setAppointmentToDelete] = useState(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const storedUser = window.localStorage.getItem('user');
+    if (!storedUser) {
+      setError('Please log in to view your appointments.');
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const parsed = JSON.parse(storedUser);
+
+      if (!parsed || !parsed.id) {
+        setError('Missing patient information. Please log in again.');
+        setLoading(false);
+        return;
+      }
+
+      setPatientId(parsed.id);
+    } catch (parseError) {
+      setError('Unable to read saved profile. Please log in again.');
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (patientId === null) {
+      return;
+    }
+
+    let isCancelled = false;
+
+    const loadAppointments = async () => {
+      setLoading(true);
+      setError(null);
+
+      try {
+        const [appointmentsResponse, schedulesResponse] = await Promise.all([
+          fetchAppointmentsByPatient(patientId),
+          fetchAllSchedules()
+        ]);
+
+        if (isCancelled) {
+          return;
+        }
+
+        const scheduleMap = new Map(
+          (schedulesResponse?.schedules ?? []).map((schedule) => [schedule.schedule_id, schedule])
+        );
+
+        const items = (appointmentsResponse?.appointment ?? [])
+          .map((entry) => {
+            const schedule = scheduleMap.get(entry.schedule_id);
+            const slot = schedule ? SHIFT_TIME_MAP[schedule.work_shifts_id] : null;
+            const sortKeySource = schedule?.date && slot ? `${schedule.date}T${slot.start}` : schedule?.date;
+            const parsedSortKey = sortKeySource ? Date.parse(sortKeySource) : NaN;
+            const sortKey = Number.isNaN(parsedSortKey) ? Number.MAX_SAFE_INTEGER : parsedSortKey;
+
+            return {
+              id: entry.appointment_id ?? entry.id,
+              doctor: schedule?.doctor?.full_name ?? 'Unknown doctor',
+              date: formatDateLabel(schedule?.date),
+              time: formatShiftLabel(schedule?.work_shifts_id),
+              status: entry.status ?? schedule?.status ?? 'unknown',
+              sortKey
+            };
+          })
+          .sort((a, b) => a.sortKey - b.sortKey)
+          .map(({ sortKey, ...rest }) => rest);
+
+        setAppointments(items);
+      } catch (loadError) {
+        if (!isCancelled) {
+          setError(loadError.message ?? 'Failed to load appointments.');
+          setAppointments([]);
+        }
+      } finally {
+        if (!isCancelled) {
+          setLoading(false);
+        }
+      }
+    };
+
+    loadAppointments();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [patientId]);
 
   const handleDeleteClick = (id) => {
     setAppointmentToDelete(id);
     setShowPopup(true);
   };
 
-  const handleConfirmDelete = () => {
-    if (appointmentToDelete) {
-      setAppointments(appointments.filter(apt => apt.id !== appointmentToDelete));
+  const handleConfirmDelete = async () => {
+    if (!appointmentToDelete) {
+      return;
     }
-    setShowPopup(false);
-    setAppointmentToDelete(null);
+
+    const targetId = appointmentToDelete;
+    setError(null);
+
+    try {
+      await cancelAppointment(targetId);
+      setAppointments((current) => current.filter((apt) => apt.id !== targetId));
+    } catch (cancelError) {
+      setError(cancelError.message ?? 'Failed to cancel the appointment.');
+    } finally {
+      setShowPopup(false);
+      setAppointmentToDelete(null);
+    }
   };
 
   const handleCancelDelete = () => {
@@ -249,16 +400,29 @@ const App = () => {
         </div>
 
         <div className="appointments-list">
-          {appointments.map(appointment => (
-            <AppointmentCard
-              key={appointment.id}
-              doctor={appointment.doctor}
-              date={appointment.date}
-              time={appointment.time}
-              status={appointment.status}
-              onDelete={() => handleDeleteClick(appointment.id)}
-            />
-          ))}
+          {loading ? (
+            <div className="state-message">Loading appointments...</div>
+          ) : appointments.length === 0 ? (
+            error ? (
+              <div className="state-message state-error">{error}</div>
+            ) : (
+              <div className="state-message state-empty">You have no appointments yet.</div>
+            )
+          ) : (
+            <>
+              {error ? <div className="state-message state-error">{error}</div> : null}
+              {appointments.map((appointment) => (
+                <AppointmentCard
+                  key={appointment.id}
+                  doctor={appointment.doctor}
+                  date={appointment.date}
+                  time={appointment.time}
+                  status={appointment.status}
+                  onDelete={() => handleDeleteClick(appointment.id)}
+                />
+              ))}
+            </>
+          )}
         </div>
       </main>
       
@@ -316,6 +480,28 @@ const App = () => {
           display: flex;
           flex-direction: column;
           gap: 20px;
+        }
+
+        .state-message {
+          padding: 24px;
+          border-radius: 12px;
+          border: 1px solid #e0e0e0;
+          background-color: #fff;
+          color: #666;
+          text-align: center;
+          font-size: 15px;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+          width: 100%;
+        }
+
+        .state-message.state-error {
+          border-color: #ffcdd2;
+          background-color: #ffebee;
+          color: #c62828;
+        }
+
+        .state-message.state-empty {
+          background-color: #fafafa;
         }
 
         .appointment-card {
@@ -408,4 +594,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Apppointments;

@@ -902,93 +902,106 @@
     {"id": 11, "start_time": "17:00", "end_time": "18:00" }
   ],
   "schedules": [
-    {
-      "schedule_id": 1,
-      "doctor_id": 1,
-      "service_id": 1,
-      "status" : "unavailable",
-      "date": "2025-12-10",
-      "work_shifts_id": 1
-    },
-    {
-      "schedule_id": 2,
-      "doctor_id": 2,
-      "service_id": 1,
-      "status" : "available",
-      "date": "2025-12-10",
-      "work_shifts_id": 1
-    },
-    {
-      "schedule_id": 3,
-      "doctor_id": 3,
-      "service_id": 1,
-      "status" : "available",
-      "date": "2025-12-10",
-      "work_shifts_id": 1
-    },
-    {
-      "schedule_id": 4,
-      "doctor_id": 1,
-      "service_id": 1,
-      "status" : "available",
-      "date": "2025-12-10",
-      "work_shifts_id": 2
-    },
-    {
-      "schedule_id": 5,
-      "doctor_id": 2,
-      "service_id": 1,
-      "status" : "available",
-      "date": "2025-12-10",
-      "work_shifts_id": 2
-    },
-    {
-      "schedule_id": 6,
-      "doctor_id": 3,
-      "service_id": 1,
-      "status" : "available",
-      "date": "2025-12-10",
-      "work_shifts_id": 2
-    },
-    {
-      "schedule_id": 7,
-      "doctor_id": 1,
-      "service_id": 1,
-      "status" : "available",
-      "date": "2025-12-10",
-      "work_shifts_id": 3
-    },
-    {
-      "schedule_id": 8,
-      "doctor_id": 2,
-      "service_id": 1,
-      "status" : "available",
-      "date": "2025-12-10",
-      "work_shifts_id": 3
-    },
-    {
-      "schedule_id": 9,
-      "doctor_id": 3,
-      "service_id": 1,
-      "status" : "available",
-      "date": "2025-12-10",
-      "work_shifts_id": 3
-    }
-  ],
-  "appointments": [
-    {
-      "appointment_id": 1,
-      "schedule_id": 1,
-      "status" : "active",
-      "patient_id" : 1
-    },
-    {
-      "appointment_id": 2,
-      "schedule_id": 2,
-      "status" : "cancel",
-      "patient_id" : 1
-    }
-  ],
+  {
+    "schedule_id": 1,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-13",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 2,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-13",
+    "work_shifts_id": 3
+  },
+  {
+    "schedule_id": 3,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-13",
+    "work_shifts_id": 4
+  },
+  {
+    "schedule_id": 4,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-13",
+    "work_shifts_id": 5
+  },
+
+  {
+    "schedule_id": 5,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-14",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 6,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-14",
+    "work_shifts_id": 3
+  },
+  {
+    "schedule_id": 7,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-14",
+    "work_shifts_id": 6
+  },
+  {
+    "schedule_id": 8,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-14",
+    "work_shifts_id": 7
+  },
+
+  {
+    "schedule_id": 9,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-15",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 10,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-15",
+    "work_shifts_id": 3
+  },
+  {
+    "schedule_id": 11,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-15",
+    "work_shifts_id": 4
+  },
+  {
+    "schedule_id": 12,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-15",
+    "work_shifts_id": 8
+  }
+],
+
     "patients": [
     {
       "id": 1,

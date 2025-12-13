@@ -1,29 +1,48 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { useAuth } from "../../context/AuthContext.jsx"
+// import { useAuth } from "../../context/AuthContext.jsx"
 
 export default function Login() {
   const [activeTab, setActiveTab] = useState("login")
-  const [email, setEmail] = useState("")
+  const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const navigate = useNavigate()
-  const { login } = useAuth()
+  // const { login } = useAuth()
 
   const handleSubmit = async (event) => {
     event.preventDefault()
     setError("")
 
-    if (!email || !password) {
-      setError("Please provide both email and password.")
+    if (!username || !password) {
+      setError("Please provide both username and password.")
       return
     }
 
     try {
       setIsSubmitting(true)
-      await login({ email, password })
-      navigate("/")
+      // await login({ email, password })
+      // navigate("/")
+
+      const res = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({username: username, password: password})
+      })
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.message);
+      } else {
+        localStorage.setItem("user", JSON.stringify(data.user));
+        console.log(data);
+        navigate("/");
+      }
+
     } catch (authError) {
       setError(authError.message ?? "Unable to log in. Please try again.")
     } finally {
@@ -96,14 +115,16 @@ export default function Login() {
             <div className="divider-line"></div>
           </div>
 
+          {error ? <p className="form-error">{error}</p> : null}
+
           {/* Email/Password Form */}
           <form className="login-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label className="form-label">Email address</label>
+              <label className="form-label">Username</label>
               <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 className="form-input"
               />
             </div>
@@ -117,8 +138,6 @@ export default function Login() {
                 className="form-input"
               />
             </div>
-
-            {error ? <p className="form-error">{error}</p> : null}
 
             <button type="submit" className="submit-btn">
               {isSubmitting ? "Signing in..." : "Log In"}

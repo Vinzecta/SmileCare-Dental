@@ -87,6 +87,10 @@ router.post("/appointment/create", (req, res) => {
   }
 
   // Create new appointment ID
+  if (!clinicData.appointments) {
+  clinicData.appointments = [];
+  }
+
   const newAppointmentId =
     clinicData.appointments.length > 0
       ? clinicData.appointments[clinicData.appointments.length - 1].appointment_id + 1

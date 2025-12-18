@@ -39,7 +39,6 @@ export default function Login() {
         setError(data.message);
       } else {
         localStorage.setItem("user", JSON.stringify(data.user));
-        console.log(data);
         navigate("/");
       }
 

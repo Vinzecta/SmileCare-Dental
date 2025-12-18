@@ -71,7 +71,6 @@ export default function AppointmentPopup({ onClose, doctor_id }) {
         );
 
         const data = await res.json();
-        console.log(data);
 
         const slots = data.schedules.map((s) => ({
           schedule_id: s.schedule_id,
@@ -132,8 +131,6 @@ export default function AppointmentPopup({ onClose, doctor_id }) {
       shift: selectedSlot.shift,
       patient: form
     };
-
-    console.log("BOOKING PAYLOAD:", payload);
 
     try {
       const res = await fetch("http://localhost:5000/appointment/create", {

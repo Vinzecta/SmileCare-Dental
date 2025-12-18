@@ -999,6 +999,175 @@
     "status": "available",
     "date": "2025-12-15",
     "work_shifts_id": 8
+  },
+  {
+  "schedule_id": 13,
+  "doctor_id": 1,
+  "service_id": 1,
+  "status": "available",
+  "date": "2025-12-16",
+  "work_shifts_id": 2
+},
+  {
+    "schedule_id": 14,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-16",
+    "work_shifts_id": 3
+  },
+  {
+    "schedule_id": 15,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-16",
+    "work_shifts_id": 4
+  },
+
+  {
+    "schedule_id": 16,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-17",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 17,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-17",
+    "work_shifts_id": 5
+  },
+
+  {
+    "schedule_id": 18,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-18",
+    "work_shifts_id": 3
+  },
+  {
+    "schedule_id": 19,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-18",
+    "work_shifts_id": 4
+  },
+  {
+    "schedule_id": 20,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-18",
+    "work_shifts_id": 6
+  },
+
+  {
+    "schedule_id": 21,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-19",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 22,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-19",
+    "work_shifts_id": 7
+  },
+
+  {
+    "schedule_id": 23,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-20",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 24,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-20",
+    "work_shifts_id": 3
+  },
+
+  {
+    "schedule_id": 25,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-21",
+    "work_shifts_id": 3
+  },
+
+  {
+    "schedule_id": 26,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-22",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 27,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-22",
+    "work_shifts_id": 4
+  },
+
+  {
+    "schedule_id": 28,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-23",
+    "work_shifts_id": 5
+  },
+
+  {
+    "schedule_id": 29,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "unavailable",
+    "date": "2025-12-24",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 30,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-24",
+    "work_shifts_id": 3
+  },
+
+  {
+    "schedule_id": 31,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-25",
+    "work_shifts_id": 2
+  },
+  {
+    "schedule_id": 32,
+    "doctor_id": 1,
+    "service_id": 1,
+    "status": "available",
+    "date": "2025-12-25",
+    "work_shifts_id": 3
   }
 ],
 

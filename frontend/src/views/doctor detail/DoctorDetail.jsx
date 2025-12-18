@@ -3,12 +3,25 @@ import { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import AppointmentPopup from "../../components/AppointmentPopup";
+import Popup from "../../components/PopUp";
+import { useNavigate } from "react-router-dom";
 
 export default function DoctorDetail() {
     const { id } = useParams();
-    const [doctor, setDoctor] = useState(null); // ❗ Ban đầu là null để check dễ hơn
+    const [doctor, setDoctor] = useState(null); 
     const [loading, setLoading] = useState(true);
     const [showPopUp, setShowPopUp] = useState(false);
+    const [showLoginPopUp, setShowLoginPopUp] = useState(false);
+    const user = localStorage.getItem("user");
+    const navigate = useNavigate();
+
+    const handlePopUp = () => {
+        if (!user) {
+            setShowLoginPopUp(true);
+        } else {
+            setShowPopUp(true);
+        }
+    }
 
     useEffect(() => {
         const fetchDoctor = async () => {
@@ -68,7 +81,7 @@ export default function DoctorDetail() {
                         {doctor.doctor?.description}
                     </p>
 
-                    <button onClick={() => setShowPopUp(true)} className="!mt-6 !px-10 !py-3 bg-[#3d4f48] w-full text-white rounded-full hover:bg-[#2f3f38] transition">
+                    <button onClick={handlePopUp} className="!mt-6 !px-10 !py-3 bg-[#3d4f48] w-full text-white rounded-full hover:bg-[#2f3f38] transition">
                         BOOK APPOINTMENT
                     </button>
                 </div>
@@ -91,6 +104,15 @@ export default function DoctorDetail() {
         {/* Appointment pop up */}
         {
             showPopUp ? <AppointmentPopup onClose={() => setShowPopUp(false)} doctor_id={doctor.doctor.doctor_id} /> : null
+        }
+
+        {/* Login Popup */}
+        {
+            showLoginPopUp ? <Popup onClose={() => setShowLoginPopUp(false)}
+                                    onNavigate={() => navigate("/login")}
+                                    content={"You need to log in to book appointment!"}
+                                    title={"Login Needed!"}
+                                    action={"Login"} /> : null
         }
         <Footer />
         </>

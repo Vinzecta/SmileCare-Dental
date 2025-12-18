@@ -15,7 +15,6 @@ export default function DoctorDetail() {
             try {
                 const res = await fetch(`http://localhost:5000/doctor-detail/${id}`);
                 const data = await res.json();
-                console.log(data);
                 setDoctor(data);
             } catch (err) {
                 console.error(err);

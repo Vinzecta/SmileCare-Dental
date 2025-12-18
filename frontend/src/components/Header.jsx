@@ -80,7 +80,7 @@ export default function Header() {
     <header className="header">
       {/* Logo */}
       <Link to="/" className="logo-wrapper">
-        <img src="Logo.png" alt="SmileCare Dental Logo" className="logo-image" />
+        <img src="/Logo.png" alt="SmileCare Dental Logo" className="logo-image" />
       </Link>
 
       {/* Navigation */}

@@ -38,12 +38,11 @@ export default function FindDoctor() {
             }
         }
 
-        const fetchServices = async () => { // ✅ Đổi tên function cho rõ ràng
+        const fetchServices = async () => {
             try {
                 const res = await fetch("http://localhost:5000/services");
                 const data = await res.json();
-                console.log('Services data:', data); // ✅ Debug
-                setServices(data); // ✅ Set vào state services
+                setServices(data);
             } catch (err) {
                 console.error('Error fetching services:', err);
             }

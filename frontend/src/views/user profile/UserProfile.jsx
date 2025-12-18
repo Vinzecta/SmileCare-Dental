@@ -25,7 +25,6 @@ export default function UserProfile() {
             if (!res.ok) {
                 alert("Cannot fetch user info");
             } else {
-                console.log(data);
                 setPatient(data);
             }
         };
